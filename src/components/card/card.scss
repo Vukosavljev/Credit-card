@@ -1,11 +1,35 @@
 .card-container {
-    border-radius: 20px;
-    width: 200px;
-    height: 50px;
-    border: 2px solid #fafafa;
+    padding: 16px;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .card-logo {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
+
+        .logo-img {
+            height: 20px;
+            width: 70px;
+            display: inline-block;
+        }
+    }
+
+    .card-chip{
+        display: flex;
+        justify-content: flex-start;
+        .chip-img {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .card-name-and-date {
+        display: flex;
+        justify-content: space-between;
     }
 }
