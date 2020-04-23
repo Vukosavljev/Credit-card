@@ -1,4 +1,5 @@
 .card-container {
+    background-image: linear-gradient(to right, #c4bae4, #dbcdcd);
     padding: 16px;
     width: 250px;
     height: 150px;
@@ -19,9 +20,10 @@
         }
     }
 
-    .card-chip{
+    .card-chip {
         display: flex;
         justify-content: flex-start;
+
         .chip-img {
             height: 20px;
             width: 20px;
@@ -31,5 +33,19 @@
     .card-name-and-date {
         display: flex;
         justify-content: space-between;
+    }
+
+    .add-card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .add-sign {
+            color: red;
+            width: 20px;
+
+        }
     }
 }
