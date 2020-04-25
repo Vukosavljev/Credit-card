@@ -1,11 +1,13 @@
-import React from 'react';
-import Container from './components/Container'
+import React from "react";
+import { BrowserRouter as Router, Redirect } from "react-router-dom";
+import Container from "./components/Container";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Container />
-    </div>
+      <Redirect exact from="/" to="cards" />
+    </Router>
   );
 }
 

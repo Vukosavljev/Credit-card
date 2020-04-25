@@ -1,0 +1,15 @@
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .edit-container {
+        cursor: pointer;
+
+        :hover {
+            div {
+                opacity: .6;
+            }
+
+        }
+    }
+}

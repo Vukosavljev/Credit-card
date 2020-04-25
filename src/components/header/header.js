@@ -1,10 +1,10 @@
-import React from 'react'
-import './header.scss'
+import React from "react";
+import "./header.scss";
 
-export default function header() {
-    return (
-        <header className="header">
-            <h1 className="title" >Credit Card</h1>
-        </header>
-    )
+export default function Header() {
+  return (
+    <header className="header">
+      <h1 className="title">Credit Card</h1>
+    </header>
+  );
 }

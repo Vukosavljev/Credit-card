@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./card.scss";
 import discovercard from "../../assets/img/discovercard.png";
 import chip from "../../assets/img/chip.png";
 
-export default function card({ isNew }) {
+export default function Card({ isNew }) {
   const content = isNew ? (
     <>
       <div className="card-logo">
@@ -26,3 +27,7 @@ export default function card({ isNew }) {
 
   return <div className="card-container">{content}</div>;
 }
+
+PropTypes.Card = {
+  isNew: PropTypes.boolean,
+};
