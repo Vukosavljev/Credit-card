@@ -5,6 +5,15 @@ import Card from "./card/Card";
 import "./container.scss";
 
 export default class Container extends Component {
+  state = {
+    creditCard: {
+      type: "visa",
+      number: "1234-4444-5555-6666",
+      user: "Marko Markovic",
+      expirationDate: "02/22",
+    },
+  };
+
   render() {
     return (
       <>
@@ -20,10 +29,10 @@ export default class Container extends Component {
                 }}
                 className="edit-container"
               >
-                <Card isNew={true} />
+                <Card mode="view" details={this.state.creditCard} />
               </div>
               <div>
-                <Card isNew={false} />
+                <Card mode={false} />
               </div>
             </main>
           )}
