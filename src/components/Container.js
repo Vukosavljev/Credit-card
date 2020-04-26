@@ -16,28 +16,32 @@ export default class Container extends Component {
 
   render() {
     return (
-      <>
+      <div className="app-container">
         <Header />
-        <Route
-          exact
-          path="/cards"
-          render={({ history }) => (
-            <main className="card-wrapper">
-              <div
-                onClick={() => {
-                  history.push("cards/add");
-                }}
-                className="edit-container"
-              >
-                <Card mode="view" details={this.state.creditCard} />
-              </div>
-              <div>
-                <Card mode={false} />
-              </div>
-            </main>
-          )}
-        />
-      </>
+        <main className="card-wrapper">
+          <Route
+            exact
+            path="/cards"
+            render={({ history }) => (
+              <>
+                <div
+                  onClick={() => history.push("cards/edit")}
+                  className="edit-container"
+                >
+                  <Card mode="view" details={this.state.creditCard} />
+                </div>
+                <div>
+                  <Card mode={false} />
+                </div>
+              </>
+            )}
+          />
+
+          <Route path="/cards/edit">
+            <Card mode="edit" details={this.state.creditCard} />
+          </Route>
+        </main>
+      </div>
     );
   }
 }

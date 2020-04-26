@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Container />
-      <Redirect exact from="/" to="cards" />
+      <Redirect exact from="/" to="/cards" />
     </Router>
   );
 }
